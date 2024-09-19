@@ -1,20 +1,29 @@
 import styles from './Post.module.css';
-    import Comment from './Comment';
+import Comment from './Comment';
 import Avatar from './Avatar';
 
-export default function Post() {
+export default function Post({ author, publishedAt }) {
+    const publishedDateFormatted = new Intl.DateTimeFormat('pt-BR', {
+        day: '2-digit',
+        month: 'long',
+        hour: '2-digit',
+        minute: '2-digit'
+    }).format(publishedAt);
+
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://github.com/RomuloHFG.png" />
+                    <Avatar src={author.avatarUrl} />
                     <div className={styles.authorInfo}>
-                        <strong>Rômulo Henrique</strong>
-                        <span>FullStack Developer</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
-                <time title='17 de setembro às 17:03' dateTime="2024-09-17 17:03:40">Publicado há 1h</time>
+                <time title='17 de setembro às 17:03' dateTime="2024-09-17 17:03:40">Publicado há 1h
+                    {publishedDateFormatted}
+                </time>
             </header>
 
             <div className={styles.content}>
@@ -36,11 +45,11 @@ export default function Post() {
                 </footer>
             </form>
             <div className={styles.commentList}>
-              <Comment/>
-              <Comment/>
-              <Comment/>
+                <Comment />
+                <Comment />
+                <Comment />
 
-                           
+
             </div>
         </article>
     )
