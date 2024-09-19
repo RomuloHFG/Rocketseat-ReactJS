@@ -20,6 +20,22 @@ const posts = [
       { type: 'link', content: "href=>jane.design/doctorcare" }
 
     ],
+    publishedAt: new Date('2022-09-18 20:00:00'),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'http://github.com/Gaabezk.png',
+      name: 'Gabriel Fernandes',
+      role: "fullstack development instructor"
+    },
+    content: [
+      { type: 'paragraph', content: "Fala galeraa 👋," },
+      { type: 'paragraph', content: " Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀" },
+      { type: 'link', content: "href=>jane.design/doctorcare" }
+
+    ],
+    publishedAt: new Date('2022-09-18 21:00:00'),
   },
 
 ];
@@ -33,18 +49,13 @@ export default function App() {
         <Sidebar />
 
         <main>
+        {posts.map((post) => (
           <Post
-            author="Rômulo Henrique"
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus nam tenetur, 
-            velit molestiae expedita voluptatem adipisci maxime veritatis excepturi eaque dolore unde assumenda nihil neque nemo dignissimos. 
-            Voluptatum, exercitationem?"
-          />
-          <Post
-            author="Beatriz"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Inventore, illum, quos, cumque autem neque quia beatae fuga aut expedita 
-            natus voluptatum quidem ea commodi atque non."
-          />
+            key={post.id}
+            author={post.author}
+            content={post.content}
+            publishedAt={post.publishedAt}/>
+            ))}
         </main>
       </div>
     </div>
