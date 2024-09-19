@@ -9,7 +9,7 @@ export default function Sidebar() {
             <img className={styles.cover} src="https://images7.alphacoders.com/420/thumb-1920-420344.jpg" />
 
             <div className={styles.profile}>
-             <Avatar/>
+             <Avatar src="https://github.com/RomuloHFG.png"/>
 
                 <strong>Rômulo Henrique</strong>
                 <span>FullStack Developer</span>
