@@ -4,6 +4,25 @@ import Sidebar from "./components/Sidebar";
 import styles from "./App.module.css";
 
 import "./global.css";
+import { content } from "./components/Post.module.css";
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'http://github.com/RomuloHFG.png',
+      name: 'Rômulo Henrique',
+      role: "FullStack Developer"
+    },
+    content: [
+      { type: 'paragraph', content: "Fala galeraa 👋," },
+      { type: 'paragraph', content: " Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀" },
+      { type: 'link', content: "href=>jane.design/doctorcare" }
+
+    ],
+  },
+
+];
 
 
 export default function App() {
@@ -11,8 +30,8 @@ export default function App() {
     <div>
       <Header />
       <div className={styles.wrapper}>
-        <Sidebar/>
-        
+        <Sidebar />
+
         <main>
           <Post
             author="Rômulo Henrique"
