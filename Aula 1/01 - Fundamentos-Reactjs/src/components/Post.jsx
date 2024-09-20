@@ -59,7 +59,7 @@ export default function Post({ author, publishedAt, content }) {
             </form>
             <div className={styles.commentList}>
                 {comments.map(comment=> {
-                    return <Comment/>;
+                    return <Comment content={comment}/>;
                 })}
             </div>
         </article>
