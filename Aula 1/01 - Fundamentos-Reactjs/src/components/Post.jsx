@@ -8,8 +8,8 @@ import { useState } from 'react';
 export default function Post({ author, publishedAt, content }) {
 
     const [comments, setComments] = useState([
-        1,
-        2,
+        "Post muito DaHora, hein?!"
+        
     ])
 
     const publishedDateFormatted = format(publishedAt, " d 'de' LLLL 'às' HH:mm'h'", { locale: ptBR })
@@ -19,7 +19,7 @@ export default function Post({ author, publishedAt, content }) {
     function handleCreateNewComment(){
         event.preventDefault()
 
-       setComments([1,2,3]);
+       setComments([...comments, comments.length + 1]);
     }
 
     return (
