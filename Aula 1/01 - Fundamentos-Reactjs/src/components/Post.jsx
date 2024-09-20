@@ -7,7 +7,7 @@ import { format, formatDistanceToNow } from 'date-fns';
 export default function Post({ author, publishedAt }) {
     const publishedDateFormatted = format(publishedAt, " d 'de' LLLL 'às' HH:mm'h'", { locale: ptBR })
 
-    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, { locale: ptBR, })
+    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, { locale: ptBR, addSuffix: 'true'})
 
     return (
         <article className={styles.post}>
