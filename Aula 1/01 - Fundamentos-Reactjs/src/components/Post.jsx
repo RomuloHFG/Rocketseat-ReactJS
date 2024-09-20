@@ -13,6 +13,8 @@ export default function Post({ author, publishedAt, content }) {
         
     ])
 
+    const [newCommentText, setNewCommentText] = useState('');
+
     const publishedDateFormatted = format(publishedAt, " d 'de' LLLL 'às' HH:mm'h'", { locale: ptBR })
 
     const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, { locale: ptBR, addSuffix: 'true' })
@@ -20,11 +22,9 @@ export default function Post({ author, publishedAt, content }) {
     function handleCreateNewComment(){
         event.preventDefault()
 
-      const newCommentText = event.target.comment.value
-      
-        setComments([...comments, newCommentText]);
+         setComments([...comments, newCommentText]);
 
-
+     
     }
 
     return (
@@ -56,7 +56,7 @@ export default function Post({ author, publishedAt, content }) {
             <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
 
-                <textarea name='comment' placeholder="Deixe um comentário" />
+                <textarea name='comment' placeholder="Deixe um comentário" onChange={handleNewCommentChange}/>
 
                 <footer>
                     <button type='submit'>Publicar</button>
