@@ -10,12 +10,14 @@ export default function Comment({ content, onDeleteComment }) {
     const [likeCount, setLikeCount] = useState(0)
 
     function handleDeleteComment() {
-
         onDeleteComment(content);
     }
 
-    function handleLikeComment (){
-        setLikeCount(likeCount + 1);
+    function handleLikeComment() {
+        setLikeCount((state) => {
+            return state + 1;
+        });
+
     }
 
 
@@ -35,10 +37,10 @@ export default function Comment({ content, onDeleteComment }) {
                             <Trash size={24} />
                         </button>
                     </header>
-                  
+
                     <p>{content}</p>
                 </div>
-               
+
                 <footer>
                     <button onClick={handleLikeComment}>
                         <ThumbsUp />
