@@ -8,6 +8,8 @@ export default function App() {
       <Button color="secondary"/>
       <Button color="success"/>
       <Button color="danger"/>
+      <Button/>
+
     </>
   )
 }

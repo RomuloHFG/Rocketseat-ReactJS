@@ -1,7 +1,9 @@
+import styles from "./Button.module.css";
+
 interface ButtonProps{
     color?: "primary" | "secondary" | "danger" | "success";
 }
 
-export default function Button(props: ButtonProps){
-    return <button>Enviar</button>
+export default function Button({color = "primary"}: ButtonProps){
+return <button className={`${styles.button} ${styles[color]}`} >Enviar</button>
 }
