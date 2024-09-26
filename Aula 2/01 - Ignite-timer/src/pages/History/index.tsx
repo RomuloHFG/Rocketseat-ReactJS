@@ -1,4 +1,4 @@
-import { HistoryContainer, HistoryList } from "./styles";
+import { HistoryContainer, HistoryList, Status } from "./styles";
 
 export default function History() {
     return (
@@ -21,37 +21,37 @@ export default function History() {
                             <td>Tarefa</td>
                             <td>20m</td>
                             <td>Há cerca de 2 meses</td>
-                            <td>Concluído</td>
+                            <td><Status>Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20m</td>
                             <td>Há cerca de 2 meses</td>
-                            <td>Concluído</td>
+                            <td><Status>Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20m</td>
                             <td>Há cerca de 2 meses</td>
-                            <td>Concluído</td>
+                            <td><Status>Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20m</td>
                             <td>Há cerca de 2 meses</td>
-                            <td>Concluído</td>
+                            <td><Status>Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20m</td>
                             <td>Há cerca de 2 meses</td>
-                            <td>Concluído</td>
+                            <td><Status>Concluído</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20m</td>
                             <td>Há cerca de 2 meses</td>
-                            <td>Concluído</td>
+                            <td><Status>Concluído</Status></td>
                         </tr>
                     </tbody>
                 </table>
