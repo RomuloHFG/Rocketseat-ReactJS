@@ -60,12 +60,6 @@ export default function Countdown() {
         }
     }, [minutes, seconds, activeCycle])
 
-
-
-
-
-
-
     return (
         <CountdownContainer>
             <span>{minutes[0]}</span>
