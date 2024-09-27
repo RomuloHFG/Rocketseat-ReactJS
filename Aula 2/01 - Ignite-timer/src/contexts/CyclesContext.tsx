@@ -34,6 +34,11 @@ interface CyclesContextProviderProps {
 export function CyclesContextProvider({ children }: CyclesContextProviderProps) {
 
     const [cycles, dispatch] = useReducer((state: Cycle[], action: any) => {
+        
+        if(action.type === "ADD_NEW_CYCLE") {
+            return [...state, action.payload.newCycle]
+        }
+      
         return state
     }, [])
 
