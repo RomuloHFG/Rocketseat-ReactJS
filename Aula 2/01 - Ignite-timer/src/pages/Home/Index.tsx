@@ -62,7 +62,7 @@ export default function Home() {
                         Interromper
                     </StopCountdownButton>
                 ) : (<StartCountdownButton disabled={isSubmitDisabled} type="submit">
-                    <Play size={24} />
+                    <Play size={24}/>
                     Começar
                 </StartCountdownButton>)}
 

@@ -18,8 +18,9 @@ export const HomeContainer = styled.main`
 
 export const BaseCountdownButton = styled.button`
   width: 100%;
+  height: 100%;
   border: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius:8px;
 
   display: flex;
