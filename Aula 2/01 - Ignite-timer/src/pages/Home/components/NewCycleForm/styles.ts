@@ -29,7 +29,6 @@ const BaseInput = styled.input`
     &::placeholder{
         color: ${(props) => props.theme['gray-500']};
     }
-    
     `
     export const TaskInput = styled(BaseInput)`
     flex: 1;
@@ -42,6 +41,4 @@ const BaseInput = styled.input`
 
 export const MinutesAmountInput = styled(BaseInput)`
     width: 4rem;
- 
-
   `

@@ -14,7 +14,8 @@ export const CountdownContainer = styled.div`
     padding: 2rem 1rem;
     border-radius: 8px;
 
-  }`
+  }
+  `
 
 export const Separator = styled.div`
   padding: 2rem 0;

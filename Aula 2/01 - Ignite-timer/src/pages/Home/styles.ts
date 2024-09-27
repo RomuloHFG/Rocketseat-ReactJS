@@ -13,13 +13,8 @@ export const HomeContainer = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
-  }`
-
-
-
-
-
-
+  }
+  `
 
 export const BaseCountdownButton = styled.button`
   width: 100%;
@@ -42,8 +37,6 @@ export const BaseCountdownButton = styled.button`
     opacity: 0.7;
     cursor: not-allowed;
   }
-
-
  `
 
  export const StartCountdownButton = styled(BaseCountdownButton)`
