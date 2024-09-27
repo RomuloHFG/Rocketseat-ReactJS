@@ -3,10 +3,10 @@ import { HomeContainer, StartCountdownButton, StopCountdownButton } from './styl
 import { FormProvider, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import {  useContext } from "react";
+import { CyclesContext } from "../../contexts/CyclesContext";
 import * as zod from "zod";
 import NewCycleForm from "./components/NewCycleForm";
 import Countdown from "./components/Countdown";
-import { CyclesContext } from "../../contexts/CyclesContext";
 
 
 
