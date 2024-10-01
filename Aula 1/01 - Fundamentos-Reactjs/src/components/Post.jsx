@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import ptBR from 'date-fns/locale/pt-BR';
 import { format, formatDistanceToNow } from 'date-fns';
 import { useState } from 'react';
-import { comment } from './Comment.module.css';
+import  comment  from './Comment/Comment.module.css';
 
 export default function Post({ author, publishedAt, content }) {
 
